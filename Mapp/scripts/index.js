@@ -13,13 +13,11 @@ window.onload = function () {
     // Create base layers
     var baseLayer = browserStorage['baseLayer'] || 'Open Street Maps';
     var baseLayers = {
-        'Open Street Maps': createLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
+        'Open Street Maps': createLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'),
         'Thunderforest Cycle': createLayer('http://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png'),
         'Thunderforest Outdoors': createLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png'),
         'Thunderforest Landscape': createLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png'),
-        'Thunderforest Transport': createLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png'),
-        'Mapbox Streets': createLayer('https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'),
-        'Mapbox Light': createLayer('https://api.tiles.mapbox.com/v4/mapbox.light/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw')
+        'Thunderforest Transport': createLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png')
     };
     baseLayers[baseLayer].addTo(map);
     var tiles = [];
